@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+/* ========== 地址Start ========== */
+.m-address{padding:20px 0;
+}
+.m-address .wrapper{position: relative;width:960px;margin:0 auto;min-height:500px;box-shadow:0 1px 0 0 #ddd;background-color:#fff;
+padding:20px 0 0 0;
+top:70px}
+.m-address .wrapper .ui-chat {top: 0px}
+.m-address .wrapper .area{width:1000px;margin:0 auto; position:relative;
+bottom:0px;}
+.m-address .wrapper .area .title,.m-address .wrapper .area .title1{font-size:15px;font-weight:600;text-align:left;width:100%;height:60px;line-height:60px}
+.m-address .wrapper .area .title1{ font-weight:400}
+.m-address .wrapper .title h4{margin:0 0}
+.m-address .wrapper .area .type{width:100%;height:60px;line-height:60px}
+.m-address .wrapper .area .border-bottom{border-bottom:1px solid #e3e3e3}
+.m-address .wrapper .area .type span{font-weight:500;height:60px;line-height:60px;display:inline-block}
+.m-address .wrapper .area .type .left{font-size:20px;letter-spacing:2px;float:left;width:200px}
+.m-address .wrapper .area .type .middle{margin:0 auto;width:280px;text-align:center}
+.invite,.m-address .wrapper .area .type .middle .delivery{font-size:15px;margin:0 15px;cursor:pointer;height:60px;line-height:60px;font-weight:600;letter-spacing:3px;display:inline-block}
+.m-address .wrapper .area .type .on{color:red;border-bottom:2px solid red}
+.m-address .wrapper .area .type .right{font-size:15px;float:right;width:200px;text-align:right}
+.m-address .wrapper .area .type .right a{color:red}
+
+.addr-box-line{height:36px;margin:10px 0 5px 0;position:relative}
+.addr-box-line .text-w02{width:100px;height:36px;line-height:36px;text-align:right;font-size:15px;font-weight:400;float:left;color:#585858}
+.addr-box-line .text-input05 input{border:1px solid silver;width:300px;height:34px;line-height:34px;float:left;margin:0 0 0 17px;background-color:#f8f8f6;padding-left:16px;color:#b2b2b2}
+.addr-box-line .text-input06 input{border:1px solid silver;width:400px;height:34px;line-height:34px;float:left;margin:0 0 0 17px;background-color:#f8f8f6;padding-left:16px;color:#b2b2b2}
+.text-input07{border:1px solid silver;float:left;margin:0 0 0 17px;position:relative;width:108px;height:34px;background-color:#f8f8f6; line-height:34px}
+.text-input07 input{width:80px;height:34px;border:0;line-height:34px;background-color:transparent;text-align:center;color:#b2b2b2;font-size:13px;margin-left:0;position:absolute}
+.text-input07 .add-icon{position:absolute;top:14px;right:5px;width:18px;height:18px;background:url(../images/customer/add_icon.png) no-repeat}
+.addr-box-line .text-w100{width:100px;height:36px;line-height:36px;text-align:right;font-size:15px;font-weight:400;float:left;color:#585858}
+.addr-box-line .query-btn a{width: 71px;height: 29px;float: left;line-height: 32px;text-align: center;font-size: 14px;color: #fb4545;text-decoration: none;display: inline-table;}
+.addr-box-line .query-btn{width:75px;height:34px;float:left;margin:0 0 0 20px;border:1px solid silver}
+.addr-box-map{width:165px;height:30px;float:left;line-height:30px;margin:0 0 5px 0;background:url(../images/customer/map_icon01.png) no-repeat left center}
+.addr-box-line .text-w01{height:30px;line-height:20px;float:left;color:#b2b2b2;font-size:12px;margin: 0 0 0 117px}
+.addr-box-line .a1{ padding:0 10px}
+
+.save-button{margin-left:120px}
+.save-button a{width:107px;height:36px;float:left;line-height:36px;text-align:center;font-size:14px;color:#fff;text-decoration:none;display:inline-table;background-color:#5fba72
+}
+.cancel-button a{width:75px;height:34px;float:left;margin:0 0 0 38px;border:1px solid silver;line-height:36px;text-align:center
+}
+
+.area .a-user{ width:500px !important;
+margin-bottom:10px
+}
+.area .a-setuser{ height:110px !important;
+margin-top:20px;
+position:relative
+}
+.area .a-setuser .userleft{ position:relative;
+top:-10px}
+.area .a-user img{ margin-right:20px;
+}
+.area .a-user .pad{ padding-left:30px
+}
+
+/*订单*/
+.m-order{ width:inherit;
+height:40px;
+line-height:40px;
+background:#F0F0F0;
+margin-top:10px;
+margin-bottom:30px}
+
+.m-order ul li{ float:left;
+width:100px;
+padding:0 20px;
+font-weight:600
+}
+
+.m-order .m-good{ width:600px !important;
+height:62px;
+line-height:62px;
+}
+
+.s-pd{ padding-right:10px}
+
+ .o-title{ height:30px;
+width:inherit;
+}
+ .o-title span{margin:0 35px;
+font-size:16px}
+
+.m-search{ width:inherit;
+text-align:center;
+font-size:16px;
+line-height:40px;}
+
+.m-search button{ border:1px solid #C9C9C9;
+width:100px;
+height:30px;
+border-radius:5px;
+margin-left:10px;
+font-size:15px;
+background:#EFEFEF}
+
+.t-ad{ width:40px;
+height:20px;
+border:1px solid #DDDDDD;
+padding:5px;
+color:#DDDDDD}
+
+
+/*2018-3-8新增*/
+.dingwei{ position:relative;
+bottom:23px}
+
+.rb-red {
+    color: #f00;
+    border: 1px solid #F00;
+    padding: 5px 10px;
+}

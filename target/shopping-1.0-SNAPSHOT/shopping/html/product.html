@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/menu.css" />
+		<title>餐品管理</title>
+		<script type="text/javascript"
+			src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../layer/layer.js" type="text/javascript"></script>
+		<script src="../js/main.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+	function del(id){
+		layer.confirm('确定要删除吗？', {
+		  btn: ['确定','取消'] //按钮
+		}, function(){
+			layer.msg('删除成功');
+		});
+	}
+	
+	function update(id,type){
+		var msg;
+		if(type == 'N'){
+			msg = "下架"
+		}else{
+			msg = "上架"
+		}
+		layer.confirm('确定要'+msg+'吗？', {
+		  btn: ['确定','取消'] //按钮
+		}, function(){
+			layer.msg(msg+'成功');
+		});
+	}
+
+</script>
+	</head>
+	<body>
+		<div class="m-main">
+			<div class="m-food">
+				<div class="mf-top border-t">
+					<div class="fl">
+						餐品管理
+					</div>
+					<div class="fr">
+						<input type="text" />
+						<select class="select">
+                        	<option></option>
+                        </select>
+						<input type="text" />
+						<button>
+							搜索
+						</button>
+					</div>
+				</div>
+              <div class="mf-menu"
+					style="height: auto; line-height:normal; padding: 30px 0">
+					<div class="fl">
+						
+						<img src="../images/banner/Banner_18_2017_08_28_14_25_56.jpg"
+							width="100" align="center"/>
+						<span>荟萃中华九合一比萨</span>
+						<span>38.00</span>
+						<span>新疆孜然羊肉</span>
+						<span>披萨</span>
+					</div>
+					<div class="fr weizhi">
+						<button class="shangjia" onclick="update(1,'Y')">
+							上架
+						</button>
+						<button class="xiugai" onclick="change('product1',1)">
+							修改
+						</button>
+						<button class="del" onclick="del(1)">
+							删除
+						</button>
+					</div>
+                    
+					<div id="update_product1" style="display: none;" class="change">
+						<div class="new-food clear">
+							<div>
+								<input placeholder="选择图片" type="text" />
+								<button class="xiugai nw-btn" style="padding: 10px">
+									上传图片
+								</button>
+								<input placeholder="餐品名" type="text" />
+								<input placeholder="单价" type="text" />
+							</div>
+							<div>
+								<input placeholder="描述" type="text" style="width: 390px" />
+								<input type="text" placeholder="分类" style="margin-right: 0;" />
+								<a class="img-down"><img src="../images/detail/show-more.png" />
+								</a>
+							</div>
+							<div>
+								<input type="submit" class="nw-btn xiugai m-submit"
+									style="border: none; height: 40px" />
+								<input type="reset" value="取消" onclick="change('product1',2)"
+									class="del" style="height: 40px; border-radius: 5px" />
+							</div>
+						</div>
+					</div>
+				</div>
+              <div class="mf-menu clear"
+					style="line-height: normal; padding: 30px 0; width:900px; height:auto;
+                    ">
+		<div class="fl mf-prd">
+						<img src="../images/banner/Banner_18_2017_08_28_14_25_56.jpg"
+							width="100" align="center" />
+						<span>荟萃中华九合一比萨</span>
+						<span>58.00</span>
+						<span>新疆孜然羊肉</span>
+						<span>披萨</span>
+	  </div>
+					<div class="fr weizhi" style="width:300px">
+						<button class="shangjia" onclick="update(2,'Y')">
+							上架
+						</button>
+						<button class="xiugai" onclick="change('product2',1)">
+							修改
+						</button>
+						<button class="del" onclick="del(2)">
+							删除
+						</button>
+					</div>
+					<div id="update_product2" style="display: none;" class="change">
+						<div class="new-food clear">
+							<div>
+								<input placeholder="选择图片" type="text" />
+								<button class="xiugai nw-btn" style="padding: 10px">
+									上传图片
+								</button>
+								<input placeholder="餐品名" type="text" />
+								<input placeholder="单价" type="text" />
+							</div>
+							<div>
+								<input placeholder="描述" type="text" style="width: 390px" />
+								<input type="text" placeholder="分类" style="margin-right: 0;" />
+								<a class="img-down"><img src="../images/detail/show-more.png" />
+								</a>
+							</div>
+							<div>
+								<input type="submit" class="nw-btn xiugai m-submit"
+									style="border: none; height: 40px" />
+								<input type="reset" value="取消" onclick="change('product2',2)"
+									class="del" style="height: 40px; border-radius: 5px" />
+							</div>
+						</div>
+					</div>
+			  </div>
+				<div class="mf-top clear">
+					<div class="fl" style="line-height: 40px; margin-top:40px">
+						<a href="#" class=" rb-red" onclick="change('addproduct',3)">+添加新餐品</a>
+					</div>
+					<div id="insert_addproduct" style="display: none;" class="change">
+						<div class="new-food clear">
+							<div>
+								<input placeholder="选择图片" type="text" />
+								<button class="xiugai nw-btn" style="padding: 10px">
+									上传图片
+								</button>
+								<input placeholder="餐品名" type="text" />
+								<input placeholder="单价" type="text" />
+							</div>
+							<div>
+								<input placeholder="描述" type="text" style="width: 390px" />
+								<input type="text" placeholder="分类" style="margin-right: 0;" />
+								<a class="img-down"><img src="../images/detail/show-more.png" />
+								</a>
+							</div>
+							<div>
+								<input type="submit" class="nw-btn xiugai m-submit"
+									style="border: none; height: 40px" />
+								<input type="reset" value="取消" onclick="change('addproduct',4)"
+									class="del" style="height: 40px; border-radius: 5px" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<ul class="pagination fr" style="margin-right: 50px; margin-top:40px">
+							<li>
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a class="active" href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">6</a>
+							</li>
+							<li>
+								<a href="#">7</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</body>
+</html>
+<SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>

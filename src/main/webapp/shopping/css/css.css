@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form,
+	fieldset, legend, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+table {
+	boder-collapse: collspse;
+	border-spacing: 0;
+}
+
+html, body {
+	width: 100%;
+}
+
+/* 修正IE6振动bug */
+* html, * html body {
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+
+body, select, textarea, button {
+	font: 12px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+	color: #363636;
+}
+
+body {
+	width: 100%;
+	background-color: #fff;
+}
+
+body a {
+	color: #363636;
+	outline: none;
+}
+
+body a:link {
+	text-decoration: none;
+	outline: none;
+}
+
+body a:visited {
+	text-decoration: none;
+	outline: none;
+}
+
+body a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+body a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+input {
+	outline: none;
+}
+button{ border:none}
+
+input:-webkit-autofill { 
+	-webkit-box-shadow: 0 0 0 1000px #fff inset;  
+	box-shadow: 0 0 0 1000px #fff inset;  
+}  
+
+.fl{ float:left;}
+.fr{ float:right}
+.ui-bgbtn-green:hover {
+    background-color: #6fd988;
+}
+
+.ui-bgbtn-green {
+    background-color: #68d381;
+    transition: .2s ease-out;
+}
+
+.clear{ clear:left;}
+.cursor{ cursor:pointer}
+
+.redborder{ border:1px solid #ED6F63}
+.radius{ border-radius:5px}
+
+.border-t{ border-bottom:1px solid #DFDFDF}
+
+/*2018-3-8新增*/
+.mf-prd{ height:100px;
+line-height:100px;}
+
+.weizhi{ position:relative;
+bottom:-30px}
+
+.select{ width:28px;
+height:28px;
+text-align:center;
+appearance:none;  
+-moz-appearance:none;  
+-webkit-appearance:none;
+ background:url(../images/detail/show-more.png) no-repeat center center;
+ background-color:#686868;
+}

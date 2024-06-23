@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/css.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/menu.css" />
+<title>用户管理</title>
+		<script type="text/javascript"
+			src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../layer/layer.js" type="text/javascript"></script>
+		<script src="../js/main.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	function update(id,type){
+		var msg;
+		if(type == 'N'){
+			msg = "停用"
+		}else{
+			msg = "启用"
+		}
+		layer.confirm('确定要'+msg+'吗？', {
+		  btn: ['确定','取消'] //按钮
+		}, function(){
+			layer.msg(msg+'成功');
+		});
+	}
+	</script>
+</head>
+<body>
+<div class="m-main">
+	<div class="m-food">
+    	<div class="mf-top border-t">
+            <div class="fl">用户管理</div>
+            <div class="fr"><input type="text" placeholder="注册时间-始" style="width:100px;" />-<input type="text" placeholder="注册时间-终" style="width:100px;" /> <input type="text" placeholder="手机号码" /><button>查询</button></div>
+        </div>
+        <div class="mf-menu border-t">
+        	<div class="fl">
+            <span class="m-wt1"></span>
+        	<span>13100000001</span>
+            <span>张三</span>
+            <span>男</span>
+            <span>2018-01-25 00:24:35</span>
+            </div>
+            <div class="fr">
+            <button class="xiugai" onclick="update(1,'N')">停用</button>
+            </div>
+        </div>
+        <div class="mf-menu border-t">
+        	<div class="fl">
+            <span class="m-wt1"></span>
+        	<span>13100000002</span>
+            <span>李四</span>
+            <span>男</span>
+            <span>2018-01-25 00:24:35</span>
+            </div>
+            <div class="fr">
+            <button class="xiajia"  onclick="update(2,'Y')">启用</button>
+            </div>
+        </div>
+        <div class="mf-menu border-t">
+        	<div class="fl">
+            <span class="m-wt1"></span>
+        	<span>13100000003</span>
+            <span>王五</span>
+            <span>男</span>
+            <span>2018-01-25 00:24:35</span>
+            </div>
+            <div class="fr">
+            <button class="xiugai"  onclick="update(3,'N')">停用</button>
+            </div>
+        </div>
+        
+        
+      <div class="mf-top" style="margin-top:30px">
+        	
+        <ul class="pagination" style="margin-left:250px">
+               <li><a href="#">1</a></li>
+               <li><a class="active" href="#">2</a></li>
+               <li><a href="#">3</a></li>
+               <li><a href="#">4</a></li>
+               <li><a href="#">5</a></li>
+               <li><a href="#">6</a></li>
+               <li><a href="#">7</a></li>
+          </ul>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
+<SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>
