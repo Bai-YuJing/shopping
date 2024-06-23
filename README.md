@@ -122,63 +122,40 @@ MVC开始是存在于桌面程序中的，M是指业务模型，V是指用户界
 
 ## 4 关键代码
 
+```java
 package servlet;
 
- import entiy.TUser;
- import entiy.User;
- import org.apache.commons.beanutils.BeanUtils;
- import service.TUserService;
- import service.imp.TUserServiceImp;
-
- import javax.servlet.ServletException;
- import javax.servlet.annotation.WebServlet;
- import javax.servlet.http.HttpServletRequest;
- import javax.servlet.http.HttpServletResponse;
- import java.io.IOException;
- import java.lang.reflect.InvocationTargetException;
- import java.util.List;
- import java.util.Map;
-
- @WebServlet("/UserServlet")
- public class UserServlet extends BaseServlet {
-   TUserService ts = new TUserServiceImp();
-
-​      *//**处理登录**
-   **@param*** *request
-\*   ** **@param*** *response
-\*   **/
-\*   public void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
-​     //获取用户登录输入的信息
-​     Map<String, String[]> map = request.getParameterMap();
-
-​     //调用service
-​     TUser tUser = new TUser();
-​     BeanUtils.*populate*(tUser, map);
-
- //    System.out.println(tUser);
-     TUser user = ts.login(tUser);
-     if (user == null) {
-       response.getWriter().println(0);
-     }
-     //判断是否有这个用户
-     //普通用户
-     else if (tUser.getUserPwd().equals(user.getUserPwd())&& "Y".equals(user.getUserStatus())&&user.getUserRole().equals("A")) {
-       //存储当前用户对象
-       request.getSession().setAttribute("user", user);
-       response.getWriter().println(1);
-     } else if(!user.getUserStatus().equals("Y")){
-       response.getWriter().println(2);
-     } else if(tUser.getUserPwd().equals(user.getUserPwd())&&"U".equals(user.getUserRole())){
-       request.getSession().setAttribute("user", user);
-       response.getWriter().println(3);
-     }else {
-       response.getWriter().println(0);
-     }
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.lang.reflect.Method;
 
 
-   }
+@WebServlet("/BaseServlet")
+public class BaseServlet extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        try {
+            String login = request.getParameter("m");
+            Class<? extends BaseServlet> aClass = this.getClass();
+            Method method = aClass.getMethod(login, HttpServletRequest.class, HttpServletResponse.class);
+            method.invoke(this, request, response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doPost(request, response);
+    }
 }
+```
 
 ## 5 联系方式
 
